@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise - Interactive Budgeting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SpendWise Dashboard</h1>
+
+    <!-- Budget Setup Section -->
+    <section class="card">
+      <h2>Set Monthly Budget</h2>
+      <div class="form-group">
+        <input type="number" id="budget-input" placeholder="Enter total budget ($)" min="0" step="0.01">
+        <button id="set-budget-btn">Set Budget</button>
+      </div>
+      <p id="budget-feedback" class="feedback-msg"></p>
+    </section>
+
+    <!-- Expense Entry Form -->
+    <section class="card">
+      <h2>Add New Expense</h2>
+      <form id="expense-form">
+        <div class="form-group">
+          <input type="text" id="expense-title" placeholder="Expense description" required>
+          <input type="number" id="expense-amount" placeholder="Amount ($)" min="0.01" step="0.01" required>
+          <button type="submit">Add Expense</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Financial Summary Dashboard -->
+    <section class="card summary-card">
+      <h2>Financial Summary</h2>
+      <div class="summary-grid">
+        <div>
+          <h3>Total Budget</h3>
+          <p id="total-budget-display">$0.00</p>
+        </div>
+        <div>
+          <h3>Total Spent</h3>
+          <p id="total-spent-display">$0.00</p>
+        </div>
+        <div>
+          <h3>Remaining</h3>
+          <p id="remaining-budget-display">$0.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expense List Records -->
+    <section class="card">
+      <h2>Expense History</h2>
+      <ul id="expense-list" class="expense-list">
+        <li class="empty-msg">No expenses recorded yet.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
